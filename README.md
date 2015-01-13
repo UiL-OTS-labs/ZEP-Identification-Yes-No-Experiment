@@ -1,4 +1,4 @@
-# ZEP-Identification-Yes-No-Experiment
+# ZEP Identification Yes No Experiment
 Experiment:
         Auditory Identification with Yes-No Response
 
