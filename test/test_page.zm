@@ -1,11 +1,11 @@
 /******************************************************************************\
 FILE:           test_page.zm
-AUTHOR:         Theo Veenker (UiL-OTS) <T.J.G.Veenker@uu.nl>
+AUTHOR:         Theo Veenker <theo.veenker@beexy.nl>
 ADAPTED BY:     -
 
 DESCRIPTION:
 
-Provides a page object to show to the participant during test phase trials.
+Provides a page object to show to the participant during test trials.
 It handles presenting the stimulus and recording the participant's response.
 
 
@@ -13,6 +13,8 @@ HISTORY:
 2012-01-30 TV   Created.
 
 \******************************************************************************/
+
+import std_sound_output_device;
 
 
 Page test_page
@@ -262,7 +264,7 @@ Page test_page
     // Starts a trial.
     void action(Object caller, TestItem it, time tref, int count=-1)
     {
-        // Save passed trial control parameters.
+        // Save the passed trial control parameters.
         item = it;
 
 

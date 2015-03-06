@@ -1,6 +1,6 @@
 /******************************************************************************\
 FILE:           output.zm
-AUTHOR:         Theo Veenker (UiL-OTS) <T.J.G.Veenker@uu.nl>
+AUTHOR:         Theo Veenker <theo.veenker@beexy.nl>
 ADAPTED BY:     -
 
 DESCRIPTION:
@@ -14,8 +14,7 @@ HISTORY:
 \******************************************************************************/
 
 
-// Test phase output table record, defining what is to be logged for
-// each trial.
+// Test output table record.
 record TestOutput
 {
     int         trialnum;       // trial number
@@ -28,14 +27,14 @@ record TestOutput
 }
 
 
-// Test phase output table.
+// Test output table.
 TestOutput[..] test_output;
 
 
 //------------------------------------------------------------------------------
 
 
-// Appends one row of data to test phase output table.
+// Appends one row of data to test output table.
 void test_output_append(TestOutput data)
 {
     test_output.size = test_output.size + 1;
@@ -43,12 +42,12 @@ void test_output_append(TestOutput data)
 }
 
 
-// Writes test phase output table contents to CSV file and clears the table.
+// Writes test output table contents to CSV file and clears the table.
 void test_output_save()
 {
-    // Append table to CSV file (create if non-existent). The filename 
-    // format is: <dbname>/<dbnum>/<expname>/ses<sesid>-<tblnum>.csv
-    test_output.append(expdb.experiment.session.table_filename(1), 
-        "Test phase results");
+    // Append table to CSV file (create if non-existent). The filename format
+    // is: <dbname>/<dbnum>/<expname>/<phasename>/ses<sesid>-<tblnum>.csv
+    string fn = expdb.experiment.session.create_table(namespace_name, 1);
+    test_output.append(fn, namespace_name + ": test results");
     test_output.size = 0;
 }

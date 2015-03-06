@@ -3,7 +3,7 @@
 rem ----------------------------------------------------------------------------
 
 rem Define required Zep version:
-set ZEP_VER=1.6
+set ZEP_VER=1.10
 
 rem Iff installed at nonstandard location, define installation location here:
 rem set ZEP_DIR=C:\zep
@@ -11,7 +11,7 @@ rem set ZEP_DIR=C:\zep
 rem ----------------------------------------------------------------------------
 
 title Zep Console Window
-color 70
+color F0
 mode 100,40
 
 if "%ZEP_DIR%" == "" goto SKIP1

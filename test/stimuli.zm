@@ -1,6 +1,6 @@
 /******************************************************************************\
 FILE:           stimuli.zm
-AUTHOR:         Theo Veenker (UiL-OTS) <T.J.G.Veenker@uu.nl>
+AUTHOR:         Theo Veenker <theo.veenker@beexy.nl>
 ADAPTED BY:     -
 
 DESCRIPTION:
@@ -26,7 +26,7 @@ enum ItemType
 }
 
 
-// Item record used for the test phase item table.
+// Item table record.
 record TestItem
 {
     int         id;             // item id
@@ -35,9 +35,9 @@ record TestItem
 }
 
 
-// Item table used in the practice phase before the test phase.
+// Practice item table.
 //   index: item number
-TestItem[..] test_prac_items =
+TestItem[..] prac_items =
 {
     {1,         S1,     "bada1.wav"},
     {2,         S5,     "bada5.wav"},
@@ -45,7 +45,7 @@ TestItem[..] test_prac_items =
 };
 
 
-// Item table used in the test phase.
+// Test item table.
 //   index: item number
 TestItem[..] test_items =
 {

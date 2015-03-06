@@ -1,11 +1,11 @@
 /******************************************************************************\
-FILE:           random.zm
-AUTHOR:         Theo Veenker (UiL-OTS) <T.J.G.Veenker@uu.nl>
+FILE:           shuffle.zm
+AUTHOR:         Theo Veenker <theo.veenker@beexy.nl>
 ADAPTED BY:     -
 
 DESCRIPTION:
 
-Item table randomization functions.
+Item table shuffling functions.
 
 
 HISTORY:
